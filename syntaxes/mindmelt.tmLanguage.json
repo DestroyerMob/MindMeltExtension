@@ -31,7 +31,7 @@
 		"operators": {
 			"patterns": [{
 				"name": "keyword.operator.mindmelt",
-				"match": ""
+				"match": "\\b(+|-|*|/|%)\\b"
 			}]
 		},
 		"numbers": {
@@ -58,7 +58,8 @@
 		"expression": {
 			"patterns": [
 				{"include": "#numbers"},
-				{"include": "#strings"}
+				{"include": "#strings"},
+				{"include": "#reserved-words"}
 			]
 		}
 	},
