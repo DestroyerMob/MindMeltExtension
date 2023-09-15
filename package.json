@@ -1,0 +1,25 @@
+{
+  "name": "mindmelt",
+  "displayName": "mindmelt",
+  "description": "Syntax highlighting for mindmelt",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mindmelt",
+      "aliases": ["Mind Melt", "mindmelt"],
+      "extensions": [".mm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mindmelt",
+      "scopeName": "source.mindmelt",
+      "path": "./syntaxes/mindmelt.tmLanguage.json"
+    }]
+  }
+}
