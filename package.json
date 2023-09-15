@@ -12,7 +12,7 @@
   "contributes": {
     "languages": [{
       "id": "mindmelt",
-      "aliases": ["Mind Melt", "mindmelt"],
+      "aliases": ["MindMelt", "mindmelt"],
       "extensions": [".mm"],
       "configuration": "./language-configuration.json"
     }],

@@ -6,6 +6,12 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#operators"
+		},
+		{
+			"include": "#numbers "
+		},
+		{
 			"include": "#strings"
 		}
 	],
@@ -13,7 +19,19 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.mindmelt",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(?|>|<|`|~|||)\\b"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operator.mindmelt",
+				"match": ""
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "keyword.other.unit.suffix.interger.mindmelt",
+				"match": "[0-9]"
 			}]
 		},
 		"strings": {
