@@ -4,7 +4,7 @@
     "name": "MindMelt",
     "comment": "Syntax highlighting support for MindMelt.",
     "fileTypes": [
-        "mm"
+        "mm", "m"
     ],
     "patterns": [{
             "match": "<|>|\\?|\\^|\\@|\\~|\\`|\\|",
