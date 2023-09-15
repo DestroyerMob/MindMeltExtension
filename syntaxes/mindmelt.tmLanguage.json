@@ -9,17 +9,23 @@
 			"include": "#operators"
 		},
 		{
-			"include": "#numbers "
+			"include": "#numbers"
+		},
+		{
+			"include": "#expression"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#reserved-words"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.mindmelt",
-				"match": "\\b(?|>|<|`|~|||)\\b"
+				"match": "\\b(>|<|.)\\b"
 			}]
 		},
 		"operators": {
@@ -34,6 +40,10 @@
 				"match": "[0-9]"
 			}]
 		},
+		"reserved-words": {
+			"match": "\\b(>|<|.)\\b",
+			"name": "entity.name.function.member.mindmelt"
+		},
 		"strings": {
 			"name": "string.quoted.double.mindmelt",
 			"begin": "\"",
@@ -43,6 +53,12 @@
 					"name": "constant.character.escape.mindmelt",
 					"match": "\\\\."
 				}
+			]
+		},
+		"expression": {
+			"patterns": [
+				{"include": "#numbers"},
+				{"include": "#strings"}
 			]
 		}
 	},
