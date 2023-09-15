@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Mind Melt",
+	"name": "MindMelt",
 	"patterns": [
 		{
 			"include": "#keywords"
@@ -59,6 +59,7 @@
 			"patterns": [
 				{"include": "#numbers"},
 				{"include": "#strings"},
+				{"include": "#operators"},
 				{"include": "#reserved-words"}
 			]
 		}
