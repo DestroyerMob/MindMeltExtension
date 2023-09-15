@@ -1,50 +1,16 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "MindMelt",
-	"patterns": [
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "scopeName": "source.mindmelt",
+    "name": "MindMelt",
+    "comment": "Syntax highlighting support for MindMelt.",
+    "fileTypes": [
+        "mm"
+    ],
+    "patterns": [{
+            "match": "<|>|\\?|\\^|\\@|\\~|\\`|\\|",
+            "name": "storage.type.mindmelt"
+        },
 		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#operators"
-		},
-		{
-			"include": "#numbers"
-		},
-		{
-			"include": "#expression"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#reserved-words"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.mindmelt",
-				"match": "\\b(>|<|.)\\b"
-			}]
-		},
-		"operators": {
-			"patterns": [{
-				"name": "keyword.operator.mindmelt",
-				"match": "\\b(+|-|*|/|%)\\b"
-			}]
-		},
-		"numbers": {
-			"patterns": [{
-				"name": "keyword.other.unit.suffix.interger.mindmelt",
-				"match": "[0-9]"
-			}]
-		},
-		"reserved-words": {
-			"match": "\\b(>|<|.)\\b",
-			"name": "entity.name.function.member.mindmelt"
-		},
-		"strings": {
 			"name": "string.quoted.double.mindmelt",
 			"begin": "\"",
 			"end": "\"",
@@ -55,14 +21,32 @@
 				}
 			]
 		},
-		"expression": {
+		{
+			"name": "string.quoted.single.mindmelt",
+			"begin": "\\'",
+			"end": "\\'",
 			"patterns": [
-				{"include": "#numbers"},
-				{"include": "#strings"},
-				{"include": "#operators"},
-				{"include": "#reserved-words"}
+				{
+					"name": "constant.character.escape.mindmelt",
+					"match": "\\\\."
+				}
 			]
-		}
-	},
-	"scopeName": "source.mindmelt"
+		},
+		{
+			"match": "[0-9]",
+			"name": "constant.numeric"
+		},
+        {
+            "match": "\\+|\\-|\\*|\\/|\\%",
+            "name": "keyword.operator.arithmetic.mindmelt"
+        },
+        {
+            "match": "\\.|,|!|#|&|;",
+            "name": "entity.name.function.io.mindmelt"
+        },
+        {
+            "match": "\\^\\+\\<\\>\\-\\*\\/\\%\\.\\,\\+\\&\\#\\$",
+            "name": "comment.mindmelt"
+        }
+    ]
 }
